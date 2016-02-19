@@ -28,7 +28,7 @@
       "samples": 256,
       "isovalue": 0.45,
       "drawWalls": true,
-      "isoalpha": 1,
+      "isoalpha": 0.6,
       "isosmooth": 0.5045783843331688,
       "isocolour": [
         150.0,
