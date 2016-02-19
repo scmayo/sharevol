@@ -58,7 +58,7 @@
       "brightness": 0,
       "contrast": 1,
       "power": 1,
-      "usecolourmap": false,
+      "usecolourmap": true,
       "layout": "x|y|z",
       "zoom": 0.6683351069050206,
       "X": 93,
