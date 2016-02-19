@@ -6,9 +6,9 @@
     256
   ],
   "scale": [
-    2,
-    2,
-    2
+    1,
+    1,
+    1
   ],
   "nogui" : false,
   "volume": {
@@ -39,7 +39,7 @@
       "Ymin": 0,
       "Xmin": 0,
       "Zmax": 1,
-      "Ymax": 0.9723324001313833,
+      "Ymax": 1,
       "Xmax": 1,
       "density": 5,
       "brightness": -0.11780890196982163,
