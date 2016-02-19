@@ -190,7 +190,7 @@ void main()
         //Get density 
         float density = tex3D(pos);
 
-#define ISOSURFACE
+//#define ISOSURFACE
 #ifdef ISOSURFACE
         //Passed through isosurface?
         if (uIsoValue > 0.0 && ((!inside && density >= uIsoValue) || (inside && density < uIsoValue)))
