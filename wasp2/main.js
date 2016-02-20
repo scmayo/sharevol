@@ -51,7 +51,7 @@ function initPage() {
       if (props["url"]) loadTexture();
     } else {
       //Attempt to load default.json
-      json = "default.json";
+      json = "wasp2.json";
     }
   }
 
