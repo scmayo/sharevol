@@ -54,7 +54,7 @@
 
       "samples": 256,
 
-      "isovalue": 0.25,
+      "isovalue": 0.28,
 
       "drawWalls": true,
 
@@ -84,7 +84,7 @@
 
       "Xmax": 1,
 
-      "density": 70,
+      "density": 40,
 
       "brightness": -0.11780890196982163,
 
