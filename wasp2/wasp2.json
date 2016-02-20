@@ -2,6 +2,7 @@
 
   "url": "wasp2.jpg",
 
+
   "res": [
 
     256,
@@ -22,7 +23,7 @@
 
   ],
 
-  "nogui" : false,
+  "nogui" : true,
 
   "volume": {
 
