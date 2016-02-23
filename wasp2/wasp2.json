@@ -1,6 +1,7 @@
 {
 
-  "url": "wasp.jpg",
+  "url": "wasp2.jpg",
+
 
   "res": [
 
@@ -22,12 +23,11 @@
 
   ],
 
-  "nogui" : false,
+  "nogui" : true,
 
   "volume": {
 
-  "translate": [
-
+"translate": [
       -0.05715767664977255,
       -0.031176914536239782,
       -1.818653347947321
@@ -102,7 +102,7 @@
 
     "properties": {
 
-      "show": true,
+      "show": false,
 
       "brightness": 0,
 
