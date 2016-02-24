@@ -23,7 +23,7 @@
 
   ],
 
-  "nogui" : true,
+  "nogui" : false,
 
   "volume": {
 
