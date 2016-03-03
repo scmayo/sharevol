@@ -3,6 +3,7 @@
  * @author Brandon Jones
  * @author Colin MacKenzie IV
  * @version 1.3.7
+ * tinkering SCM
  */
 
 /** @preserve Copyright (c) 2012 Brandon Jones, Colin MacKenzie IV
