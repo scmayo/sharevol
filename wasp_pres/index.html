@@ -145,7 +145,7 @@ vec2 rayIntersectBox(vec3 rayDirection, vec3 rayOrigin)
 void main()
 {
     //Correct gl_FragCoord for aspect ratio
-    float aspect =  uWindowSize.x / uWindowSize.y;
+    float aspect =  1.0;//uWindowSize.x / uWindowSize.y;
     vec2 coord = vec2((gl_FragCoord.x - (uWindowSize.x - uWindowSize.y) * 0.5) * aspect, gl_FragCoord.y);
     vec3 rayDirection = normalize((vec4(2.0 * coord / uWindowSize - 1.0, -uFocalLength, 0) * uMVMatrix).xyz);
 
