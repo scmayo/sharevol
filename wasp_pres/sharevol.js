@@ -5361,7 +5361,7 @@ dat.GUI = dat.gui.GUI = (function (css, saveDialogueContents, styleSheet, contro
         }
 
         // Put it in the dom for you.
-        auto_place_container.appendChild(this.domElement);
+      //  auto_place_container.appendChild(this.domElement);
 
         // Apply the auto styles
         dom.addClass(this.domElement, GUI.CLASS_AUTO_PLACE);
