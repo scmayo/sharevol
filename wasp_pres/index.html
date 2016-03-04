@@ -541,9 +541,10 @@ html, body {
   color: #000; 
   cursor: move; 
   padding: 7px 10px 11px 10px; 
- # position: absolute; 
+  position: absolute; 
   border-radius: 5px; border: 1px solid #444; 
-  min-width: 200px;
+#  min-width: 200px;
+  max-width: 150px;
   max-height: 400px;
 }
 .scroll {
@@ -613,7 +614,7 @@ html, body {
     <option value="spectrum.cmap">Spectrum</option>
   </select>
   <br>
-  <canvas id="palette" width="512" height="24" class="palette checkerboard"></canvas>
+  <canvas id="palette" width="300" height="24" class="palette checkerboard"></canvas>
 
   <div id="backgroundBG" class="colourbg checkerboard">
     <div id="backgroundCUR" class="colour" onmousedown="colours.editBackground($('backgroundCUR'));"></div>
