@@ -66,14 +66,14 @@ vec4 texture3Dfrom2D(vec3 pos)
   float B = float(slice+1) * islices.x;
   vec2 z1offset = vec2(fract(A), floor(A) / slices.y) + sampleOffset;
   vec2 z2offset = vec2(fract(B), floor(B) / slices.y) + sampleOffset;
-  
+
   //Interpolate the final value by position between slices [0,1]
   return mix(texture2D(uVolume, z1offset), texture2D(uVolume, z2offset), fract(Z));
 }
 
 float interpolate_tricubic_fast(vec3 coord);
 
-float tex3D(vec3 pos) 
+float tex3D(vec3 pos)
 {
   if (uFilter > 0)
     return interpolate_tricubic_fast(pos);
@@ -145,7 +145,7 @@ vec2 rayIntersectBox(vec3 rayDirection, vec3 rayOrigin)
 void main()
 {
     //Correct gl_FragCoord for aspect ratio
-    float aspect = uWindowSize.x / uWindowSize.y;
+    float aspect = 1; //uWindowSize.x / uWindowSize.y;
     vec2 coord = vec2((gl_FragCoord.x - (uWindowSize.x - uWindowSize.y) * 0.5) * aspect, gl_FragCoord.y);
     vec3 rayDirection = normalize((vec4(2.0 * coord / uWindowSize - 1.0, -uFocalLength, 0) * uMVMatrix).xyz);
 
@@ -175,7 +175,7 @@ void main()
     //Number of samples to take along this ray before we pass out back of volume...
     float travel = distance(rayStop, rayStart) / stepSize;
     int samples = int(ceil(travel));
-  
+
     //Raymarch, front to back
     for (int i=0; i < maxSamples; ++i)
     {
@@ -188,7 +188,7 @@ void main()
       if (all(greaterThanEqual(pos, uBBMin)) && all(lessThanEqual(pos, uBBMax)))
 #endif
       {
-        //Get density 
+        //Get density
         float density = tex3D(pos);
 
 #define ISOSURFACE
@@ -249,7 +249,7 @@ void main()
           T *= 1.0 - value.a;
         }
       }
-	  
+
       //Next sample...
       pos += step;
     }
@@ -265,7 +265,7 @@ void main()
     {
       vec4 clip_space_pos = uPMatrix * pos;
       float ndc_depth = clip_space_pos.z / clip_space_pos.w;
-      float depth = (((gl_DepthRange.far - gl_DepthRange.near) * ndc_depth) + 
+      float depth = (((gl_DepthRange.far - gl_DepthRange.near) * ndc_depth) +
                      gl_DepthRange.near + gl_DepthRange.far) / 2.0;
       gl_FragDepth = depth;
     }
@@ -309,7 +309,7 @@ policies, either expressed or implied.
 When using this code in a scientific project, please cite one or all of the
 following papers:
 *  Daniel Ruijters and Philippe Thévenaz,
-   GPU Prefilter for Accurate Cubic B-Spline Interpolation, 
+   GPU Prefilter for Accurate Cubic B-Spline Interpolation,
    The Computer Journal, vol. 55, no. 1, pp. 15-20, January 2012.
 *  Daniel Ruijters, Bart M. ter Haar Romeny, and Paul Suetens,
    Efficient GPU-Based Texture Interpolation using Uniform B-Splines,
@@ -513,9 +513,9 @@ html {
   font-size: 11pt;
   background: #ffe;
 }
-html, body { 
+html, body {
   padding: 0; margin: 100;
-  border: none; 
+  border: none;
   width: 100%;
   height: 100%;
 }
@@ -537,12 +537,12 @@ html, body {
 
 .toolbox {
   visibility: hidden; z-index: 20;
-  background: rgba(255,255,255,0.5); 
-  color: #000; 
-  cursor: move; 
-  padding: 7px 10px 11px 10px; 
-  position: absolute; 
-  border-radius: 5px; border: 1px solid #444; 
+  background: rgba(255,255,255,0.5);
+  color: #000;
+  cursor: move;
+  padding: 7px 10px 11px 10px;
+  position: absolute;
+  border-radius: 5px; border: 1px solid #444;
   min-width: 200px;
   max-height: 400px;
 }
@@ -551,7 +551,7 @@ html, body {
   max-height: 330px;
 }
 .toolbox div,table,td,tr {
-  cursor: move; 
+  cursor: move;
 }
 
 .toolbox * {cursor: auto;}
